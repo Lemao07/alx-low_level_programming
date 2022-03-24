@@ -1,65 +1,25 @@
-nclude "main.h"
-
-
+#include "main.h"
 
 /**
+ *_strcat - appends strings
+ *@dest: destination
+ *@src: source
  *
- *  *_strncat - concatenate strings
- *
- *   *@dest: destination
- *
- *    *@src: source
- *
- *     *@n: integer
- *
- *      *
- *
- *       *Return: destination
- *
- *        */
+ *Return: dest
+ */
 
-
-
-char *_strncat(char *dest, char *src, int n)
-
+char *_strcat(char *dest, char *src)
 {
+int i = 0;
+int j = 0;
 
-	int j = 0;
-
-	int i = 0;
-
-
-
-	while (dest[i] != '\0')
-
-	{
-
-		i++;
-
-	}
-
-
-
-	for (j = 0; src[j] != '\0'; j++)
-
-	{
-
-		if (j < n)
-
-		{
-
-			dest[j + i] = src[j];
-
-		}
-
-		else
-
-
-
-			dest[j + i] = '\0';
-
-	}
-
-	return (dest);
-
+while (dest[i] != '\0')
+{
+i++;
+}
+for (j = 0; src[j] != '\0'; j++)
+{
+dest[i + j] = src[j];
+}
+return (dest);
 }
