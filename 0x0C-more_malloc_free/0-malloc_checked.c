@@ -1,13 +1,20 @@
-#include <unistd.h>
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * malloc_checked - Entry point
+ * @b: input amount
+ * Return: pointer to a new memory
  */
-int _putchar(char c)
+void *malloc_checked(unsigned int b)
 {
-	return (write(1, &c, 1));
+	void *n =  malloc(b);
+
+	if (n == NULL)
+	
+		exit(98);
+
+	return (n);
 }
